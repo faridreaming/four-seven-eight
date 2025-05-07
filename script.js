@@ -57,7 +57,7 @@ function updateProgressBar(progressBar, duration, callback) {
         } else if (progressBar === progressExhale) {
             bar.textContent = `Exhale ${remainingTime}s`;
         }
-    }, 35);
+    }, 100);
 
     if (progressBar === progressExhale) {
         breathCountValue++;
