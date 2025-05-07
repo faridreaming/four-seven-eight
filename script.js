@@ -1,24 +1,33 @@
-let startButton = document.getElementById("startButton");
-let progressInhale = document.getElementById("progressInhale");
-let progressHold = document.getElementById("progressHold");
-let progressExhale = document.getElementById("progressExhale");
+const startButton = document.getElementById("startButton");
+const startButtonText = document.getElementById("startButtonText");
+const progressInhale = document.getElementById("progressInhale");
+const progressHold = document.getElementById("progressHold");
+const progressExhale = document.getElementById("progressExhale");
+const breathCount = document.getElementById("breathCount");
 
 let isBreathing = false;
 let inhaleInterval, holdInterval, exhaleInterval;
+let breathCountValue = 0;
 
 function startBreathing() {
     if (isBreathing) {
         // Stop the breathing exercise and reset progress
         resetBreathing();
-        startButton.textContent = "Start Breathing";
+        startButtonText.textContent = "Start Breathing";
         isBreathing = false;
     } else {
         // Start the breathing exercise
-        startButton.textContent = "Stop Breathing";
+        startButtonText.textContent = "Stop Breathing";
         isBreathing = true;
         startExercise();
     }
 }
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === " ") {
+        startButton.click();
+    }
+});
 
 function updateProgressBar(progressBar, duration, callback) {
     const bar = progressBar.querySelector(".progress-bar");
@@ -39,13 +48,20 @@ function updateProgressBar(progressBar, duration, callback) {
         // Update text
         const remainingTime = (duration - elapsedTime).toFixed(1);
         if (progressBar === progressInhale) {
+            if (breathCountValue > 0) {
+                breathCount.textContent = breathCountValue;
+            }
             bar.textContent = `Inhale ${remainingTime}s`;
         } else if (progressBar === progressHold) {
             bar.textContent = `Hold ${remainingTime}s`;
         } else if (progressBar === progressExhale) {
             bar.textContent = `Exhale ${remainingTime}s`;
         }
-    }, 100);
+    }, 35);
+
+    if (progressBar === progressExhale) {
+        breathCountValue++;
+    }
 
     return timer;
 }

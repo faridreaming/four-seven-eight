@@ -75,7 +75,15 @@
                 </div>
 
                 <div class="text-center">
-                    <button class="btn btn-lg btn-primary px-5 rounded-pill" id="startButton">Start Breathing</button>
+                    <button class="btn btn-lg btn-primary px-5 rounded-pill position-relative" id="startButton">
+                        <span id="startButtonText">Start Breathing</span>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fw-normal"
+                        >
+                            Breathe count: <span id="breathCount">0</span>
+                            <span class="visually-hidden">Breathe count</span>
+                        </span>
+                    </button>
                 </div>
             </div>
         </main>
