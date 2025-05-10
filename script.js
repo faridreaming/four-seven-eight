@@ -60,7 +60,7 @@ function updateProgressBar(progressBar, duration, callback) {
     }, 100);
 
     if (progressBar === progressExhale) {
-        breathCountValue++;
+        
     }
 
     return timer;
@@ -82,6 +82,7 @@ function startHoldPhase() {
 
 function startExhalePhase() {
     if (!isBreathing) return;
+    breathCountValue++;
     // Exhale Phase (8 seconds)
     exhaleInterval = updateProgressBar(progressExhale, 8, () => {
         if (isBreathing) {
@@ -91,6 +92,9 @@ function startExhalePhase() {
 }
 
 function resetBreathing() {
+    breathCountValue = 0;
+    breathCount.textContent = "0";
+    
     // Clear all intervals
     clearInterval(inhaleInterval);
     clearInterval(holdInterval);
