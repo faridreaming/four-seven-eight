@@ -1,101 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Four-Seven-Eight by @faridreaming</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="./style.css" rel="stylesheet" />
-        <link href="./wind.png" type="image/x-icon" rel="shortcut icon" />
-    </head>
-    <body class="bg-light">
-        <main class="container-fluid min-vh-100 d-flex align-items-center justify-content-center">
-            <div class="container" style="max-width: 600px">
-                <div class="text-center mb-5">
-                    <div class="d-flex align-items-center gap-3 justify-content-center">
-                        <img class="logo" src="./wind.png" alt="Logo" />
-                        <h1 class="fw-bold">Four-Seven-Eight</h1>
-                    </div>
-                    <p class="lead">A simple breathing exercise</p>
-                    <p class="text-muted">Inhale for 4 seconds, hold for 7 seconds, exhale for 8 seconds.</p>
-                </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Four-Seven-Eight by @faridreaming</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <link href="./wind.png" type="image/x-icon" rel="shortcut icon" />
+  </head>
+  <body class="bg-light">
+    <main class="container-fluid min-vh-100 d-flex align-items-center justify-content-center">
+      <div class="container" style="max-width: 600px">
+        <div class="text-center mb-5">
+          <div class="d-flex align-items-center gap-3 justify-content-center">
+            <img class="logo" src="./wind.png" alt="Logo" />
+            <h1 class="fw-bold">Four-Seven-Eight</h1>
+          </div>
+          <p class="lead">A simple breathing exercise</p>
+          <p class="text-muted">Inhale for 4 seconds, hold for 7 seconds, exhale for 8 seconds.</p>
+        </div>
 
-                <div class="card shadow-sm rounded-4 p-4 mb-4">
-                    <div class="row align-items-center">
-                        <div class="col-2">
-                            <div class="fs-1 fw-bold text-primary text-center">4</div>
-                        </div>
-                        <div class="col-10">
-                            <div
-                                class="progress"
-                                role="progressbar"
-                                id="progressInhale"
-                                aria-valuenow="0"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                            >
-                                <div class="progress-bar bg-primary" style="width: 0%">Inhale 4.0s</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm rounded-4 p-4 mb-4">
-                    <div class="row align-items-center">
-                        <div class="col-2">
-                            <div class="fs-1 fw-bold text-warning text-center">7</div>
-                        </div>
-                        <div class="col-10">
-                            <div
-                                class="progress"
-                                role="progressbar"
-                                id="progressHold"
-                                aria-valuenow="0"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                            >
-                                <div class="progress-bar bg-warning text-dark" style="width: 0%">Hold 7.0s</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm rounded-4 p-4 mb-4">
-                    <div class="row align-items-center">
-                        <div class="col-2">
-                            <div class="fs-1 fw-bold text-success text-center">8</div>
-                        </div>
-                        <div class="col-10">
-                            <div
-                                class="progress"
-                                role="progressbar"
-                                id="progressExhale"
-                                aria-valuenow="0"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                            >
-                                <div class="progress-bar bg-success" style="width: 0%">Exhale 8.0s</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <button class="btn btn-lg btn-primary px-5 rounded-pill position-relative" id="startButton">
-                        <span id="startButtonText">Start Breathing</span>
-                        <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fw-normal"
-                        >
-                            Breathe count: <span id="breathCount">0</span>
-                            <span class="visually-hidden">Breathe count</span>
-                        </span>
-                    </button>
-                </div>
+        <div class="card shadow-sm rounded-4 p-4 mb-4">
+          <div class="row align-items-center">
+            <div class="col-2">
+              <div class="fs-1 fw-bold text-primary text-center">4</div>
             </div>
-        </main>
+            <div class="col-10">
+              <div
+                class="progress"
+                role="progressbar"
+                id="progressInhale"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div class="progress-bar bg-primary" style="width: 0%">Inhale 4.0s</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <script src="./script.js"></script>
+        <div class="card shadow-sm rounded-4 p-4 mb-4">
+          <div class="row align-items-center">
+            <div class="col-2">
+              <div class="fs-1 fw-bold text-warning text-center">7</div>
+            </div>
+            <div class="col-10">
+              <div
+                class="progress"
+                role="progressbar"
+                id="progressHold"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div class="progress-bar bg-warning text-dark" style="width: 0%">Hold 7.0s</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+        <div class="card shadow-sm rounded-4 p-4 mb-4">
+          <div class="row align-items-center">
+            <div class="col-2">
+              <div class="fs-1 fw-bold text-success text-center">8</div>
+            </div>
+            <div class="col-10">
+              <div
+                class="progress"
+                role="progressbar"
+                id="progressExhale"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div class="progress-bar bg-success" style="width: 0%">Exhale 8.0s</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button class="btn btn-lg btn-primary px-5 rounded-pill position-relative" id="startButton">
+            <span id="startButtonText">Start Breathing</span>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fw-normal">
+              Breathe count: <span id="breathCount">0</span>
+              <span class="visually-hidden">Breathe count</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
